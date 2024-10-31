@@ -15,7 +15,7 @@
             margin: 0;
         }
 
-        .login-container, .list-container {
+        .login-container {
             background: white;
             padding: 20px;
             border-radius: 5px;
@@ -63,15 +63,6 @@
             margin-top: 15px;
             color: red;
         }
-
-        .item {
-            padding: 10px;
-            border-bottom: 1px solid #ccc;
-        }
-
-        .item:last-child {
-            border-bottom: none;
-        }
     </style>
 </head>
 <body>
@@ -89,11 +80,6 @@
             <button type="submit">로그인</button>
             <p id="message"></p>
         </form>
-    </div>
-
-    <div id="listPage" class="list-container" style="display: none;">
-        <h2>목록</h2>
-        <div id="itemList"></div>
     </div>
 
     <script src="script.js"></script>
