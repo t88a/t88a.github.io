@@ -1,8 +1,6 @@
 const loginPage = document.getElementById('loginPage');
 const listPage = document.getElementById('listPage');
 const itemList = document.getElementById('itemList');
-const addButton = document.getElementById('addButton');
-const newItemInput = document.getElementById('newItem');
 const message = document.getElementById('message');
 
 let items = ['항목 1', '항목 2', '항목 3'];
@@ -30,12 +28,3 @@ function displayItems() {
         itemList.appendChild(div);
     });
 }
-
-addButton.addEventListener('click', () => {
-    const newItem = newItemInput.value.trim();
-    if (newItem) {
-        items.push(newItem);
-        newItemInput.value = '';
-        displayItems();
-    }
-});
