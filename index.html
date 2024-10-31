@@ -114,52 +114,6 @@
         </div>
     </div>
 
-    <script>
-        const loginPage = document.getElementById('loginPage');
-        const listPage = document.getElementById('listPage');
-        const itemList = document.getElementById('itemList');
-        const addButton = document.getElementById('addButton');
-        const newItemInput = document.getElementById('newItem');
-        const message = document.getElementById('message');
-
-        let items = ['항목 1', '항목 2', '항목 3'];
-
-        // 로그인 처리
-        document.getElementById('loginForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-
-            if (username === 't88a' && password === '6t88a9') {
-                loginPage.style.display = 'none'; // 로그인 페이지 숨기기
-                listPage.style.display = 'block'; // 목록 페이지 표시
-                displayItems();
-            } else {
-                message.textContent = '아이디 또는 비밀번호가 잘못되었습니다.';
-            }
-        });
-
-        // 목록을 화면에 표시하는 함수
-        function displayItems() {
-            itemList.innerHTML = ''; // 기존 목록 지우기
-            items.forEach(item => {
-                const div = document.createElement('div');
-                div.className = 'item';
-                div.textContent = item;
-                itemList.appendChild(div);
-            });
-        }
-
-        // 항목 추가 이벤트
-        addButton.addEventListener('click', () => {
-            const newItem = newItemInput.value.trim();
-            if (newItem) {
-                items.push(newItem); // 새로운 항목 추가
-                newItemInput.value = ''; // 입력 필드 초기화
-                displayItems(); // 목록 갱신
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
